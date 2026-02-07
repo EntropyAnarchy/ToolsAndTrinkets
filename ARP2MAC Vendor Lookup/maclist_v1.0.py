@@ -1,3 +1,5 @@
+# Last edited 2026-01-07 by ERC
+
 import requests
 import tkinter as tk
 from tkinter import ttk
@@ -43,10 +45,10 @@ def process_arp_table():
 # Create the GUI
 def create_gui():
     root = tk.Tk()
-    root.title("SYmplyfi ARP Table Processor v1.2")
+    root.title("ARP Table Processor v1.0")
 
     # Input Label and Text Area
-    input_label = ttk.Label(root, text="Paste ARP Table:")
+    input_label = ttk.Label(root, text="Paste 'cat /proc/net/arp' output here:")
     input_label.pack(pady=5)
 
     global arp_input
@@ -54,7 +56,7 @@ def create_gui():
     arp_input.pack(padx=10, pady=5)
 
     # Process Button
-    process_button = ttk.Button(root, text="Process ARP Table", command=process_arp_table)
+    process_button = ttk.Button(root, text="Process ARP table", command=process_arp_table)
     process_button.pack(pady=10)
 
     # Output Label and Text Area
@@ -71,3 +73,4 @@ def create_gui():
 # Run the GUI
 if __name__ == "__main__":
     create_gui()
+
